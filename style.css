@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&family=Rum+Raisin&display=swap');
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+    font-family: 'Rum Raisin', sans-serif;
+    font-size: 12px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(13,57,116);
+    background: linear-gradient(45deg, rgba(13,57,116,1) 0%, rgba(55,103,151,1) 50%, rgba(109,145,179,1) 100%);
+}
+
+.preloader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #5D89AC;
+    z-index: 99;
+    opacity: 1;
+    transition: .8s ease-in-out;
+}
+
+.preloader.loaded{
+    opacity: 0;
+    z-index: -9;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+}
+
+.left-side{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4% 3%;
+}
+
+.photo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.photo__img{
+    width: 75%;
+    transition: .2s ease-in-out;
+}
+
+.photo__img:hover{
+    transform: translateY(-5px);
+}
+
+.contacts{
+    width: 100%;
+    margin-top: 4%;
+}
+
+.contacts_mobile-version{
+    display: none;
+}
+
+.contacts__title{
+    color: white;
+    font-size: 3em;
+}
+
+.contacts__items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.contacts__item{
+    width: 18%;
+    height: 4.5em;
+    background-color: #fff;
+    border-radius: 4em;
+    text-decoration: none;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-in-out;
+}
+
+.contacts__item:visited{
+    color: transparent;
+}
+
+.contacts__item>svg{
+    height: 3.5em;
+}
+
+.contacts__item_vk:hover{
+    background-color: #467FC2;
+}
+
+.contacts__item:hover .contacts__item_white-bg{
+    fill: white;
+}
+
+.contacts__item_telegram:hover{
+    background-color: #26A1DC;
+}
+
+.contacts__item_discord:hover{
+    background-color: #7489DC;
+}
+
+.contacts__item_skype:hover{
+    background-color: #00B1F1;
+}
+
+.contacts__item_gmail:hover{
+    background-color: #EA4235;
+}
+
+.right-side{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 3% 4% 3%;
+}
+
+.title{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title__name{
+    font-size: 6em;
+}
+
+.title__education{
+    font-size: 3em;
+}
+
+.about{
+    background: url(Img/about-bg.png) 100% 100% no-repeat;
+    width: 80%;
+    height: 80%;
+    background-size: cover;
+    margin-top: 3%;
+}
+
+.about__skills{
+    font-size: 2.75em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    padding-left: 8%;
+    font-weight: bold;
+}
+
+.about__skill{
+    margin-left: 10%;
+    font-weight: 400;
+    margin-top: 1%;
+}
+
+.about__skill::marker{
+    font-size: 0.5em;
+}
+
+.about__personal-qualities{
+    font-size: 2.75em;
+    padding-left: 8%;
+    font-weight: bold;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.about__personal-quality-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about__personal-quality{
+    font-weight: 400;
+    white-space:pre
+}
+
+.about-me{
+    font-size: 2.75em;
+    padding-left: 8%;
+    margin-top: 5%;
+}
+
+@media screen and (max-width: 1920px){
+    body{
+        font-size: 0.63vw;
+    }
+}
+
+@media screen and (max-width: 720px)
+{
+    body{
+        font-size: 1.5vw;
+        background: #fff;
+    }
+    .main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrapper{
+        background: rgb(13,57,116);
+    background: linear-gradient(45deg, rgba(13,57,116,1) 0%, rgba(55,103,151,1) 50%, rgba(109,145,179,1) 100%);
+    }
+    .left-side{
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5% 2%;
+    }
+    .photo__img{
+        width: 80%;
+        transition: .2s ease-in-out;
+    }
+    .contacts_desktop-version{
+        display: none;
+    }
+    .right-side{
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5% 2%;
+    }
+    .title{
+        text-align: center;
+    }
+    .title__education{
+        margin-top: 3%;
+    }
+    .about{
+        margin-top: 10%;
+        background: #F5F4F4;
+        border: double 3em #346B98;
+        border-radius: 3em;
+        width: 95%;
+        box-sizing: border-box;
+    }
+    
+    .about__skills{
+        margin-top: 2%;
+    }
+    
+    .about__skill{
+        margin-left: 10%;
+        font-weight: 400;
+        margin-top: 3%;
+    }
+    
+    .about__skill::marker{
+        font-size: 0.8em;
+    }
+    
+    .about__personal-qualities{
+        font-size: 2.75em;
+        padding-left: 8%;
+        font-weight: bold;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin-top: 12%;
+    }
+    
+    .about__personal-quality-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .about__personal-quality{
+        font-weight: 400;
+        white-space:pre;
+        margin-top: 2%;
+    }
+    
+    .about-me{
+        font-size: 2.75em;
+        padding-left: 8%;
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+
+    .contacts_mobile-version{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts__title{
+        color: white;
+        font-size: 3em;
+    }
+    
+    .contacts__items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 3%;
+    }
+    
+    .contacts__item{
+        width: 90%;
+        height: 10em;
+        transition: .2s ease-in-out;
+        margin-bottom: 8%;
+    }
+
+    .contacts__item>svg{
+        height: 6em;
+        width: 6em;
+    }
+}
